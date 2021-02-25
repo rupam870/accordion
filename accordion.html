@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Profile accordion</title>
+    <link rel="stylesheet" href="accordion.css">
+    <script src="jquery-3.5.1 copy.js"></script>
+</head>
+<body>
+    <h3>MY PROFILE</h3>
+    <hr width="80%">
+    <img src="https://drive.google.com/thumbnail?id=1hkY1r6MqcPAjo8qxjRSZW8rHFdYYaPsx">
+    <div class="div">
+    <p id="intro">Introduction</p>
+    <p class="intro">I am Rupam Gumber.I am a first year student in IIT Roorkee in Applied Mathematics branch.I am currently exploring my interest in software development.</p>
+    <p id="reason">Reasons to explore software</p>
+    <p class="reason">Since,it is one of the fast growing tech field so i thought why not to give it a try and find out whether i like it or not.</p>
+    <p id="handles">Social media handles</p>
+    <div class="handles">
+        <a href="mailto:rupam_g@ma.iitr.ac.in"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Gmail_Icon.svg/1024px-Gmail_Icon.svg.png" width="60px" height="60px"/></a>
+        <a href="https://www.linkedin.com/in/rupam-gumber-120252204"><img src="https://neilpatel.com/wp-content/uploads/2017/05/LinkedIn.jpg" width="60px" height="60px"/></a>
+        <a href="https://www.facebook.com/rupam.gumber.9"><img src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Facebook-512.png" width="60px" height="60px"></a>
+        <a href="https://www.instagram.com/invites/contact/?i=10ji0yk9kl4vf&utm_content=i69t3u1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" width="60px" height="60px"></a>
+    </div>
+    <p id="education">Education</p>
+    <table class="education">
+        <tr>
+            <th>Class</th>
+            <th>Institution</th>
+            <th>Marks obtained</th>
+        </tr>
+        <tr>
+            <td>Class 10</td>
+            <td>Sacred Heart Convent School</td>
+            <td>95.8%</td>
+        </tr>
+        <tr>
+           <td>Class 12</td>
+           <td>A.V Public school</td>
+           <td>95.2%</td>
+        </tr>
+    </table>
+    </div>
+    <p class="empty"></p>
+    <p class="empty"></p>
+
+    <script>
+        $(".intro").hide();
+        $(".reason").hide();
+        $(".handles").hide();
+        $(".education").hide();
+
+        $("#intro").click(function(){
+          $(".intro").slideToggle(),
+          $(".reason").hide(),
+        $(".handles").hide(),
+        $(".education").hide();
+
+        });
+        $("#reason").click(function(){
+          $(".reason").slideToggle(),
+          $(".intro").hide(),
+          $(".handles").hide(),
+        $(".education").hide();
+        });
+        $("#handles").click(function(){
+          $(".handles").slideToggle(),
+          $(".intro").hide(),
+        $(".reason").hide(),
+        $(".education").hide();
+        });
+        $("#education").click(function(){
+          $(".education").slideToggle(),
+          $(".intro").hide(),
+        $(".reason").hide(),
+        $(".handles").hide();
+        });
+
+    </script>
+
+</body>
+</html>
